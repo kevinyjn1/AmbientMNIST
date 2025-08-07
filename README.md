@@ -12,23 +12,12 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
   <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST output demo" width="350px"/>
 </p>
 
-<p align="center" style="display: flex; justify-content: center; align-items: flex-start; gap: 10px;">
-  <img 
-    src="./ambientMNIST/input1.png" 
-    alt="Input 1" 
-    style="max-height: 200px; object-fit: contain;" 
-  />
-  <img 
-    src="./ambientMNIST/input2.png" 
-    alt="Input 2" 
-    style="max-height: 200px; object-fit: contain;" 
-  />
-  <img 
-    src="./ambientMNIST/output1.png" 
-    alt="Output 1" 
-    style="max-height: 200px; object-fit: contain;" 
-  />
+<p align="center">
+  <img src="ambientMNIST/input1.png"  alt="Input 1"  width="200"/>
+  <img src="ambientMNIST/input2.png"  alt="Input 2"  width="250"/>
+  <img src="ambientMNIST/output1.png" alt="Output 1" width="200"/>
 </p>
+
 
 
 - Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
