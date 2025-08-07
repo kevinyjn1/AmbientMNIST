@@ -8,12 +8,10 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 <!--- 동작하는 영상이랑 커맨드창에 제대로 분류되는지 프린트 되는 이미지 or 영상 -->
 
 <p align="center">
-  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST demo" width="150px"/>
+  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST LED demo" width="150px"/>
+  <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST output demo" width="150px"/>
 </p>
 
-<p align="center">
-  <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST full demo" width="200px"/>
-</p>
 
 - Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
 - Solar-powered MSP430FR5994 boots (via screen /dev/tty.usbmodem143303 115200), runs MNIST inference, and outputs Prediction: 0.
