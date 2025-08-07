@@ -12,9 +12,15 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
   <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST output demo" width="350px"/>
 </p>
 
+<p align="center">
+  <img src="input1.png"  alt="Input 1"  width="200px" style="margin-right:10px;"/>
+  <img src="input2.png"  alt="Input 2"  width="200px" style="margin-right:10px;"/>
+  <img src="output1.png" alt="Output"   width="200px"/>
+</p>
 
 - Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
 - Solar-powered MSP430FR5994 boots (via screen /dev/tty.usbmodem143303 115200), runs MNIST inference, and outputs Prediction: 0.
+- Left image is the raw 28×28 ASCII array, middle image is its grayscale rendering of “0,” and right image shows inference logits (0⇒247 highest), confirming the model predicts “0.”
 
 ---
 
