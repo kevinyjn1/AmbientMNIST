@@ -1,6 +1,6 @@
 # AmbientMNIST
 
-Run MNIST digit classification entirely on-device under ambient energy, using CMU’s SONIC framework on an MSP430FR5994.
+Run MNIST digit classification entirely on-device under ambient energy on an MSP430FR5994.
 
 ---
 
