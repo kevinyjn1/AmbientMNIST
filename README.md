@@ -8,16 +8,9 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 <!--- 동작하는 영상이랑 커맨드창에 제대로 분류되는지 프린트 되는 이미지 or 영상 -->
 
 <p align="center">
-  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST in action" width="150px"/>
+  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST demo" width="200px"/>
 </p>
 
-
-<p align="center">
-  <video width="200" controls>
-    <source src="./ambientMNIST/demovideo.mp4" type="video/mp4">
-    Your browser doesn’t support HTML5 video.
-  </video>
-</p>
 
 
 Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
