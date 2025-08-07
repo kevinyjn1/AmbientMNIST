@@ -6,7 +6,8 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 
 ## ⚡ Demo
 <!--- 동작하는 영상이랑 커맨드창에 제대로 분류되는지 프린트 되는 이미지 or 영상 -->
-![AmbientMNIST in action](./demo.gif)
+
+![AmbientMNIST in action](./ambientMNIST/demo.gif)
 
 - **Solar-Harvested Inference**  
   MNIST test images classified in real time while powered only by a small solar panel.  
