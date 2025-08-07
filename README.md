@@ -11,12 +11,9 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
   <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST in action" width="150px"/>
 </p>
 
-- **Solar-Harvested Inference**  
-  MNIST test images classified in real time while powered only by a small solar panel.  
 
-- **FRAM Checkpointing**  
-  Robust progress across power failures via SONIC’s sparse undo-logging and FRAM-based task commits.
-
+**Demo Description:**  
+The MSP430FR5994 board sits in complete darkness with its on-board LED off. Shining a flashlight onto the attached solar panel immediately powers the MCU—at which point it runs the blink routine and you see the LED toggle. Removing the light cuts energy harvesting, the MCU shuts down, and the LED goes dark again. This on/off cycle clearly demonstrates intermittent, energy-harvesting–driven operation.  
 ---
 
 ## 🎯 Motivation
