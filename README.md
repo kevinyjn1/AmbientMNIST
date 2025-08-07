@@ -12,7 +12,7 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 </p>
 
 
-The MSP430FR5994 board sits in complete darkness with its on-board LED off. Shining a flashlight onto the attached solar panel immediately powers the MCU—at which point it runs the blink routine and you see the LED toggle. Removing the light cuts energy harvesting, the MCU shuts down, and the LED goes dark again. This on/off cycle clearly demonstrates intermittent, energy-harvesting–driven operation.  
+Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
 
 ---
 
