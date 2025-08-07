@@ -12,6 +12,14 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 </p>
 
 
+<p align="center">
+  <video width="200" controls>
+    <source src="./ambientMNIST/demo.mp4" type="video/mp4">
+    Your browser doesn’t support HTML5 video.
+  </video>
+</p>
+
+
 Lighting the solar panel powers the MSP430FR5994 and turns LED on; removing light turns it off.
 
 ---
