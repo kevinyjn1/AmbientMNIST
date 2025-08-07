@@ -9,7 +9,7 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 
 <p align="center">
   <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST LED demo" width="150px"/>
-  <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST output demo" width="150px"/>
+  <img src="./ambientMNIST/demovideo.gif" alt="AmbientMNIST output demo" width="400px"/>
 </p>
 
 
