@@ -8,7 +8,7 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 <!--- 동작하는 영상이랑 커맨드창에 제대로 분류되는지 프린트 되는 이미지 or 영상 -->
 
 <p align="center">
-  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST in action" width="300px"/>
+  <img src="./ambientMNIST/demo.gif" alt="AmbientMNIST in action" width="150px"/>
 </p>
 
 - **Solar-Harvested Inference**  
