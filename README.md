@@ -17,15 +17,18 @@ Run MNIST digit classification entirely on-device under ambient energy on an MSP
 
 ## 🎯 Motivation
 
-Energy-harvesting IoT devices eliminate battery replacements, but unreliable power makes continuous computation difficult. We asked:
+The growing demand for intelligent IoT devices calls for ultra-low-power systems that can operate without batteries. Ambient energy harvesting, which draws power from sources like light or RF signals, offers a sustainable solution—eliminating the need for battery replacement and enabling long-term deployment in remote areas.
 
-> How can you run a deep neural network end-to-end on a MCU powered only by ambient energy?
+Yet, deploying neural networks on such systems is challenging due to limited memory and intermittent power. The MSP430FR5994, with its non-volatile FRAM and low-power design, provides a suitable platform to explore these constraints.
 
-By combining CMU’s SONIC intermittent-compute framework with on-device MNIST inference, we demonstrate robust, accurate classification under varying energy conditions.
+As a proof-of-concept, we implement a lightweight MNIST classifier to demonstrate that neural inference is possible under intermittent, harvested power. While MNIST is a simple task, it effectively validates the feasibility of energy-autonomous AI at the extreme edge.
 
 ---
 
 ## 📖 Project Description
+To execute the model under intermittent power conditions, we implemented the inference logic using the SONIC framework. SONIC enables reliable DNN execution on energy-harvesting devices by maintaining two alternating buffers for intermediate feature maps, allowing progress to continue seamlessly across power cycles.
+
+We integrated the layer-by-layer inference logic into main.c, ensuring that each operation fits within the available energy budget and memory. By leveraging SONIC’s double-buffering and task-based checkpointing mechanism, the system can recover from power loss at fine-grained computation boundaries without restarting the entire inference process.
 
 1. **Model Training & Header Generation**  
    - Train a small CNN on MNIST in TensorFlow  
