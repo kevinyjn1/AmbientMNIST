@@ -30,17 +30,25 @@ To execute the model under intermittent power conditions, we implemented the inf
 
 We integrated the layer-by-layer inference logic into main.c, ensuring that each operation fits within the available energy budget and memory. By leveraging SONIC’s double-buffering and task-based checkpointing mechanism, the system can recover from power loss at fine-grained computation boundaries without restarting the entire inference process.
 
-1. **Model Training & Header Generation**  
-   - Train a small CNN on MNIST in TensorFlow  
-   - Use `AmbientMNIST_script.ipynb` to quantize weights and write C header files
+The overall workflow is as follows:
 
-2. **SONIC Integration**  
-   - Copy headers into the SONIC repo under `apps/my_mnist/params/`  
-   - Compile SONIC example to produce `my_mnist.out`  
+1. **Lightweight CNN & Header Generation**  
+   - Train a 2-conv, 2-FC CNN on MNIST in TensorFlow, then quantize to 5-bit fixed-point.  
+   - Run `AmbientMNIST_script.ipynb` to serialize each weight/bias array into C header files (`*.h`).
 
-3. **On-Device Deployment**  
-   - Flash `my_mnist.out` to the MSP430FR5994 via TI UniFlash  
-   - Validate classifications under ambient solar harvesting
+2. **SONIC Framework Integration**  
+   - Place headers under `apps/my_mnist/params/` in the SONIC repo.  
+   - In `main.c`, implement each DNN layer as a SONIC task, using the framework’s dual-buffer scheme:  
+     - **Buffer A/B** alternate reading/writing of intermediate feature maps.  
+     - After each small “task,” SONIC checkpoints state to FRAM via sparse undo-logging.
+
+3. **Compile & Deploy**  
+   - Build with `make my_mnist` to generate `my_mnist.out`.  
+   - Flash to the MSP430FR5994 using TI UniFlash.
+
+4. **Robust Inference under Intermittent Power**  
+   - A tiny solar panel charges a storage capacitor; when voltage dips, SONIC seamlessly retries the next task on recharge.  
+   - At the end of inference, results are printed over UART for validation.
 
 ---
 
