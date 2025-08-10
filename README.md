@@ -65,10 +65,10 @@ The overall workflow is as follows:
 
 ## 🔧 Hardware & Sensors
 
-| Component                    | Part Number             | Role                                      |
-|------------------------------|-------------------------|-------------------------------------------|
-| Microcontroller              | MSP430FR5994            | Low-power MCU with FRAM checkpointing     |
-| Energy Harvesting            | 50 mm² solar panel      | Ambient power source                      |
+| Component                    | Part Number              | Role                                      |
+|------------------------------|--------------------------|-------------------------------------------|
+| Microcontroller              | MSP430FR5994             | Low-power MCU with FRAM checkpointing     |
+| Energy Harvesting            | 600 mm² solar panel      | Ambient power source                      |
 
 ---
 
